@@ -8,13 +8,122 @@
     <title>红旅动漫</title>
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet/less" href="./less/index.less">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <script src="./lib/less/less.js"></script>
 </head>
 
 <body>
     <div class="hl_container">
-        <div class="hl_header"></div>
-        <div class="hl_content"></div>
+        <div class="hl_header">
+            <a href="javascript:void(0)">
+                <span class="fa fa-list-ul"></span>
+            </a>
+            <h4>红旅动漫</h4>
+            <a href="javascript:void(0)">
+                <span class="fa fa-search"></span>
+            </a>
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span class="menuName">连载动漫</span>
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span class="menuName">专题列表</span>
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="hl_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- 轮播图 -->
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="http://ofv795nmp.bkt.clouddn.com/lunbo2.jpg">
+                                    <div class="info">
+                                        <span>红旅动漫资源分享群开放啦！！！</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 第一张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="http://ofv795nmp.bkt.clouddn.com/lunbo1.jpg">
+                                    <div class="info">
+                                        <span>每个月都来给红旅打赏下吧</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <!-- 第二张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="http://ofv795nmp.bkt.clouddn.com/lunbo2.jpg">
+                                    <div class="info">
+                                        <span>红旅动漫资源分享群开放啦！！！</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="http://ofv795nmp.bkt.clouddn.com/lunbo1.jpg">
+                                    <div class="info">
+                                        <span>每个月都来给红旅打赏下吧</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 标签导航 -->
+                    <div class="nav">
+                        <ul>
+                            <li class="active">
+                                <a href="javascript:void(0)">新增连载</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">新增完结</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">推荐连载</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">推荐完结</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="pic">
+                                        <img src="http://ofv795nmp.bkt.clouddn.com/image20.jpg" alt="">
+                                        <div class="update">
+                                            连贼只12集
+                                        </div>
+                                    </div>
+                                    <div class="name">
+                                        灵动百分百
+                                    </div>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -22,5 +131,56 @@
 
 </html>
 
+<!-- 轮播图模板 -->
+<script type="text/html" id="lunboTmp">
+    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+    <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+            <img src="">
+            <div class="info">
+                <span></span>
+            </div>
+        </a>
+    </div>
+    {{each}}
+    <div class="mui-slider-item">
+        <a href="#">
+            <img src="{{$value.img}}">
+            <div class="info">
+                <span>{{$value.title}}</span>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+    <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+            <img src="">
+            <div class="info">
+                <span></span>
+            </div>
+        </a>
+    </div>
+</script>
+<!-- 动漫列表模板 -->
+<script type="text/html" id="animeList">
+    {{each}}
+        <li>
+            <a href="javascript:void(0)">
+                <div class="pic">
+                    <img src="{{$value.img}}" alt="">
+                    <div class="update">{{$value.update}}</div>
+                </div>
+                <div class="name">
+                    {{$value.name}}
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>

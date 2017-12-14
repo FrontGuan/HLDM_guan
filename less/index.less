@@ -1,7 +1,118 @@
 
-.index_container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
+@import './base.less';
+
+.menu-list {
+    // height: 100px;
+    // background-color: skyblue;
+    display: none;
+    border: 1px solid #ccc;
+    ul {
+        li {
+            height: 36px;
+            // background-color: olivedrab;
+            padding: 0 10px;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 12px;
+                color: #0099cc;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #000;
+                span.fa-chevron-right {
+                    color: gray;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.hl_content {
+    .mui-slider-item {
+        a {
+            .info {
+                height: 30px;
+                background-color: #8d8d8d;
+                display: flex;
+                align-items: center;
+                color: #c2c2c2;
+                font-size: 12px;
+                // justify-content: space-around;
+                text-align: center;
+            }
+        }
+    }
+    .nav {
+        ul {
+            display: flex;
+            background-color: #fff;
+            li {
+                flex: 1;
+                padding: 8px 0;
+                &.active {
+                    border-bottom: 2px solid #ff0000;
+                    a {
+                        color: #ff0000;
+                    }
+                }
+                a {
+                    display: block;
+                    height: 28px;
+                    // background-color: orchid;
+                    border-right: 1px solid #666666;
+                    text-align: center;
+                    line-height: 28px;
+                    font-size: 12px; 
+                    color: #000;
+                }
+            }
+        }
+    }
+    .content {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                a {
+                    display: block;
+                    width: 182px;
+                    height: 227px;
+                    .pic {
+                        height: 197px;
+                        position: relative;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .update {
+                            width: 100%;
+                            position: absolute;
+                            height: 30px;
+                            left: 0;
+                            bottom: 0;
+                            font-size: 12px;
+                            background-color: rgba(0,0,0,.6);
+                            text-align: center;
+                            line-height: 30px;
+                            color: #c2c2c2;
+                        }
+                    }
+                    .name {
+                        flex: 1;
+                        font-size: 13px;
+                        text-align: center;
+                        line-height: 30px;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
 }
