@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>专题列表</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="./less/topics.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <div class="hl_container">
+        <div class="hl_header">
+            <a href="javascript:void(0)">
+                <span class="fa fa-chevron-left"></span>
+            </a>
+            <h4>专题列表</h4>
+            <a href="javascript:void(0)">
+                <span class="fa fa-search"></span>
+            </a>
+        </div>
+        <div class="hl_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="http://ofv795nmp.bkt.clouddn.com/topics0.jpg" alt="">
+                                <div class="title">2016年七月新番</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script type="text/html" id="topicsTmp">
+    {{each}}
+        <li>
+            <a href="{{$value.url}}">
+                <img src="{{$value.img}}" alt="">
+                <div class="title">{{$value.title}}</div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/topics.js"></script>
