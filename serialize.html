@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>连载动漫</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="./less/serialize.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <div class="hl_container">
+        <div class="hl_header">
+            <a href="javascript:void(0)">
+                <span class="fa fa-chevron-left"></span>
+            </a>
+            <h4>连载动漫</h4>
+            <a href="javascript:void(0)">
+                <span class="fa fa-search"></span>
+            </a>
+        </div>
+        <div class="hl_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="http://ofv795nmp.bkt.clouddn.com/lianzai23.jpg">
+                                <div class="mui-media-body">
+                                    <p class="name">Maho Girls 光之美少女！/魔法师光之美少女</p>
+                                    <p class='episode'>连载至36集</p>
+                                    <p class="updateTime">10-11 更新 </p>
+                                    <p class="downloadCount">下载次数:4256</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script type="text/html" id="serializeTmp">
+    {{each}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left" src="{{$value.img}}">
+                <div class="mui-media-body">
+                    <p class="name">{{$value.name}}</p>
+                    <p class='episode'>{{$value.episode}}</p>
+                    <p class="updateTime">{{$value.updateTime}}</p>
+                    <p class="downloadCount">下载次数:{{$value.downloadCount}}</p>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/serialize.js"></script>
