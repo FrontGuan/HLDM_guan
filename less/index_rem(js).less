@@ -1,0 +1,119 @@
+
+@import './base_rem(js).less';
+
+.menu-list {
+    // height: 100px;
+    // background-color: skyblue;
+    display: none;
+    border: 1px solid #ccc;
+    ul {
+        li {
+            height: 0.36rem;
+            // background-color: olivedrab;
+            padding: 0 0.1rem;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 0.12rem;
+                color: #0099cc;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #000;
+                span.fa-chevron-right {
+                    color: gray;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 0.1rem;
+            }
+        }
+    }
+}
+
+.hl_content {
+    .mui-slider-item {
+        a {
+            .info {
+                height: 0.3rem;
+                background-color: #8d8d8d;
+                display: flex;
+                align-items: center;
+                color: #c2c2c2;
+                font-size: 0.12rem;
+                // justify-content: space-around;
+                text-align: center;
+            }
+        }
+    }
+    .nav {
+        ul {
+            display: flex;
+            background-color: #fff;
+            li {
+                flex: 1;
+                padding: 0.08rem 0;
+                &.active {
+                    border-bottom: 2px solid #ff0000;
+                    a {
+                        color: #ff0000;
+                    }
+                }
+                a {
+                    display: block;
+                    height: 0.28rem;
+                    // background-color: orchid;
+                    border-right: 1px solid #666666;
+                    text-align: center;
+                    line-height: 0.28rem;
+                    font-size: 0.12rem; 
+                    color: #000;
+                }
+            }
+        }
+    }
+    .content {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                width: 48.533333%;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 2.27rem;
+                    .pic {
+                        height: 1.97rem;
+                        position: relative;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .update {
+                            width: 100%;
+                            position: absolute;
+                            height: 0.3rem;
+                            left: 0;
+                            bottom: 0;
+                            font-size: 0.12rem;
+                            background-color: rgba(0,0,0,.6);
+                            text-align: center;
+                            line-height: 0.3rem;
+                            color: #c2c2c2;
+                        }
+                    }
+                    .name {
+                        flex: 1;
+                        font-size: 0.13rem;
+                        text-align: center;
+                        line-height: 0.3rem;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
